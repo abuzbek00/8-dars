@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hisoblagich</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      background: #F3EEDF;
+      font-family: sans-serif;
+    }
+    #count {
+      margin: 0;
+      font-size: 160px;
+      color: #6B7185;
+    }
+    #plus {
+      width: 90px;
+      height: 90px;
+      border: none;
+      border-radius: 50%;
+      background: #FF6B50;
+      color: white;
+      font-size: 50px;
+      cursor: pointer;
+    }
+    #reset {
+      padding: 10px 24px;
+      border: none;
+      border-radius: 20px;
+      background: #6B7185;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="count">0</h1>
+  <button id="plus">+</button>
+  <button id="reset">O‘chirish</button>
+
+  <script>
+    let count = 0;
+    const number = document.getElementById("count");
+    const button = document.getElementById("plus");
+    const resetButton = document.getElementById("reset");
+
+    button.addEventListener("click", function () {
+      count++;
+      number.textContent = count;
+    });
+
+    resetButton.addEventListener("click", function () {
+      count = 0;
+      number.textContent = count;
+    });
+  </script>
+</body>
+</html>
